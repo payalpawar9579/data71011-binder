@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+numbers = np.array([1, 2, 3, 4, 5])
+
+data = pd.DataFrame({
+    "number": numbers,
+    "square": numbers ** 2
+})
+
+print(data)
+
+data.plot(x="number", y="square",
+          kind="line", marker="o")
+plt.show()
